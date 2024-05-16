@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url(../assets/fonts/AvenirNextLTProBold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(../assets/fonts/AvenirNextLTProDemi.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: AvenirNext;
+  src: url(../assets/fonts/AvenirNextLTPro.ttf) format("truetype");
+  font-weight: 400;
+}
+.navigation {
+  background-color: #323232;
+  color: #ffffff;
+  font-weight: 700;
+  height: 100%;
+}
+@media screen and (min-width: 320px) {
+  .navigation {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navigation {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .navigation logo {
+    font-size: 1.5rem;
+    line-height: 32%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation logo {
+    font-size: 3.75rem;
+    line-height: 68%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navigation logo {
+    font-size: 3.75rem;
+    line-height: 68%;
+  }
+}
+
+.navigation__menu--name {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "AvenirNext", sans-serif;
+  font-weight: 400;
+  display: flex;
+}
+
+.navigation__menu--name a {
+  color: #ffffff;
+}/*# sourceMappingURL=bio.css.map */
