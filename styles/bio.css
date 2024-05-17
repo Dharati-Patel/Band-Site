@@ -25,52 +25,168 @@
 .navigation {
   background-color: #323232;
   color: #ffffff;
+  font-family: "AvenirNext", sans-serif;
   font-weight: 700;
   height: 100%;
+  max-width: 100%;
 }
 @media screen and (min-width: 320px) {
   .navigation {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 768px) {
   .navigation {
     display: flex;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1024px) {
   .navigation {
     display: flex;
+    flex-direction: row;
   }
 }
 
 @media screen and (min-width: 320px) {
-  .navigation logo {
-    font-size: 1.5rem;
+  .navigation .logo {
+    font-size: 3.125rem;
+    font-weight: 500;
     line-height: 32%;
+    padding: 40px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 768px) {
-  .navigation logo {
+  .navigation .logo {
     font-size: 3.75rem;
     line-height: 68%;
+    padding-left: 60px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .navigation logo {
+  .navigation .logo {
     font-size: 3.75rem;
     line-height: 68%;
+    padding-left: 60px;
   }
+}
+
+.logo a {
+  color: #ffffff;
 }
 
 .navigation__menu--name {
-  text-decoration: none;
   list-style-type: none;
-  font-family: "AvenirNext", sans-serif;
   font-weight: 400;
   display: flex;
+  padding: 0;
+}
+.navigation__menu--name div {
+  width: 50%;
+  padding-bottom: 20px;
+}
+.navigation__menu--name div li {
+  width: 100%;
+}
+@media screen and (min-width: 320px) {
+  .navigation__menu--name div li {
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation__menu--name {
+    font-size: 2.125rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navigation__menu--name {
+    font-size: 2.125rem;
+    font-weight: 600;
+  }
+}
+
+.navigation__menu {
+  align-self: center;
 }
 
 .navigation__menu--name a {
   color: #ffffff;
+}
+@media screen and (min-width: 320px) {
+  .navigation__menu--name a {
+    padding: 25px 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation__menu--name a {
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navigation__menu--name a {
+    padding: 40px;
+  }
+}
+
+.navigation__menu a:hover {
+  border-bottom: solid red;
+}
+
+.navigation__menu a.active {
+  border-bottom: 5px solid red;
+}
+
+.hero {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__image {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.hero__image img {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero__image--text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  color: #ffffff;
+  font-family: "AvenirNext", sans-serif;
+}
+@media screen and (min-width: 320px) {
+  .hero__image--text {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__image--text {
+    font-size: 3.75rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__image--text {
+    font-size: 4.375rem;
+    font-weight: 700;
+  }
 }/*# sourceMappingURL=bio.css.map */
