@@ -1,0 +1,479 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "AvenirNext_bold";
+    src: url(../assets/fonts/AvenirNextLTProBold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "AvenirNext_demi";
+    src: url(../assets/fonts/AvenirNextLTProDemi.ttf) format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "AvenirNext_regular";
+    src: url(../assets/fonts/AvenirNextLTPro.ttf) format('truetype');
+    font-weight: 400;
+}
+
+.navigation {
+    background-color: #323232;
+    color: #ffffff;
+    font-family: "AvenirNext_regular", sans-serif;
+    font-weight: 700;
+    height: 100%;
+    width: 100%;
+    
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.navigation .logo{
+    
+    @include mobile {
+        font-size: 3.125rem;
+        font-weight: 500;
+        line-height: 32%;
+        padding: 40px;
+        text-align: center;   
+    }
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 68%;
+        padding-left: 60px;
+    }
+    @include desktop {
+        font-size: 3.75rem;
+        line-height: 68%;
+        padding-left: 60px;
+    }
+}
+
+.logo a{
+    color: #ffffff;
+}
+
+.navigation__menu--name {
+    list-style-type: none;
+    font-weight: 400;
+    display: flex;
+    padding: 0;
+
+    li {
+        width: 100%;
+           
+        @include mobile {
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding-bottom: 20px;
+        @include tablet {
+            padding-bottom: 0;
+        }
+        }
+    } 
+    
+    @include tablet {
+    font-size: 2.125rem;
+    font-weight: 600;        
+    }
+
+    @include desktop {
+        font-size: 2.125rem;
+        font-weight: 600;   
+    }
+}
+
+.navigation__menu {
+    align-self: center;
+}
+
+.navigation__menu--name a {
+    color: #E1E1E1;
+    
+    
+    @include mobile {
+        padding: 25px 100px;
+    }
+
+    @include tablet {
+        padding: 40px;
+    }
+    
+    @include desktop {
+        padding: 40px;   
+    }
+}
+
+.navigation__menu a:hover {
+    border-bottom: 10px solid #ffffff;
+}
+
+.navigation__menu li.active a {
+    border-bottom: 10px solid #ffffff;
+}
+
+.hero {
+    display: flex;
+    height: 100%;
+    
+    width: 100%;
+    object-fit: cover;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero__image {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.hero__image img {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.hero__image--text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: #ffffff;
+    font-family: "AvenirNext_regular", sans-serif;
+
+    @include mobile {
+        
+        font-size: 1.5625rem;
+        font-weight: 700;
+    }
+
+    @include tablet {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    
+    @include desktop {
+        font-size: 3.75rem;
+        font-weight: 700;
+    }
+}
+
+.about__head {
+    font-family: "AvenirNext_bold", sans-serif;
+    margin-left: 50px;
+
+    @include mobile {
+        font-size: 1.5625rem;
+        padding-top: 24px;
+        padding-left: 16px;
+    }
+
+    @include tablet {
+        font-size: 3.75rem;
+        padding-top: 48px;
+        padding-left: 36px;
+    }
+
+    @include desktop {
+        font-size: 1.875rem;
+        padding-top: 48px;
+        padding-left: 36px;
+    }
+}
+
+.about__image {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 70%;
+
+   img {
+        @include mobile {
+            height: auto;
+            width: 100%;
+            padding: 16px;
+        }
+
+        @include tablet {
+            height: auto;
+            width: 100%;
+            padding: 36px;
+        }
+        @include desktop {
+            height: auto;
+            width: 100%;
+            padding: 36px; 
+        }
+   }
+}
+
+.about__text p:nth-of-type(2) {
+    font-size: .9375rem;
+}
+
+.about__text p {
+    font-family: "AvenirNext_regular", sans-serif;
+    font-weight: 700;
+
+    @include mobile {
+        font-size: 1.25rem;
+        justify-content: center;
+        line-height: 30px;
+        padding: 0 16px;
+    }
+    @include tablet {
+        font-size: 1.25rem;
+        line-height: 40px;
+        padding: 0 36px;
+    }
+    @include desktop {
+        font-size: 1.25rem;
+        line-height: 30px;
+        padding: 0 36px;
+    } 
+}
+
+.about__description {
+    margin-top: 40px;
+
+    @include mobile {
+        p:nth-of-type(1) {
+            margin-bottom: 30px;
+        }
+    }
+    
+    h6 {
+        font-family: "AvenirNext_regular", sans-serif;
+        margin-bottom: 20px;
+
+        @include mobile {
+            font-size: 2rem;
+            padding: 0 16px;
+        }
+        @include tablet {
+            font-size: 2rem;
+            padding: 0 36px;
+        }
+        @include desktop {
+            font-size: 1.875rem;
+            padding: 0 36px;
+        }
+    }    
+}
+
+.about__description--p {
+    display: flex;
+
+    @include mobile{
+        display: inline;
+    }
+
+    @include tablet {
+        display: flex;
+    }
+
+}
+.about__description--p p {
+    font-family: "AvenirNext_regular", sans-serif; 
+    font-weight: 500;
+
+    @include mobile {
+       
+        font-size: 1.25rem;
+        line-height: 30px;
+        padding: 0 16px;
+    }
+    @include tablet {
+       
+        font-size: 1.875rem;
+        line-height: 40px;
+        padding: 0 36px;
+    }
+    @include  desktop{
+        font-size: .9375rem;
+        line-height: 25px;
+        padding: 0 36px;
+    }
+ }
+
+.photoGallery {
+    background-color: #FAFAFA;
+}
+
+.photoGallery__head {
+    font-family: "AvenirNext_bold", sans-serif;
+    margin-left: 50px;
+    margin-bottom: 36px;
+
+    @include mobile {
+        font-size: 1.5625rem;
+        padding-top: 24px;
+        padding-left: 16px;
+    }
+
+    @include tablet {
+        font-size: 3.75rem;
+        padding-top: 48px;
+        padding-left: 36px;
+    }
+
+    @include desktop {
+        font-size: 1.875rem;
+        padding-top: 48px;
+        padding-left: 36px;
+    }
+
+    h3 {
+        margin-bottom: 30px;
+    }
+}
+
+ .photoGallery__grid {
+    display: grid;
+ }
+
+ .photoGallery__grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photoGallery__grid {
+    @include mobile {
+        grid-gap: 16px;
+        grid-template-columns: 1fr;
+    }
+    
+    @include tablet {
+        grid-gap: 36px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.f__footer {
+    margin-left: 50px;
+}
+
+.footer {
+    background-color: #323232;
+    color: #ffffff;
+
+    .footer__icons {
+        display: flex;
+        
+        @include mobile {
+            flex-direction: column;
+            padding: 25px 0;
+        }
+        @include tablet {
+            
+            flex-direction: row;
+            padding-left: 36px;
+            padding-top: 36px;
+        }
+        h5 {
+            font-size: 2.1875rem;
+            padding-right: 100px;
+        }
+    }
+} 
+
+.footer__social  {
+    padding-top: 12px;
+    a {
+        padding-right: 50px;
+    }
+}
+
+.footer_description {
+    display: flex;
+    
+
+    @include mobile {
+        flex-direction: column;
+    }
+    @include tablet {
+        flex-direction: row;
+        padding-left: 36px;
+    }
+    @include desktop {
+        flex-direction: row;
+        padding-left: 36px;
+    }
+}
+
+.footer__copyright {
+
+    @include mobile {
+        padding-bottom: 36px;
+    }
+    @include tablet {
+        padding-left: 36px;
+        padding-bottom: 16px;
+    }
+    @include desktop {
+        padding-left: 36px;
+        padding-bottom: 36px;
+    }
+}
+
+.footer_description div {
+    font-family: "AvenirNext_regular", sans-serif;
+
+    @include tablet {
+        padding-right: 100px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+  
+    p:nth-of-type(1) {
+        font-weight: 700;
+    }
+    @include mobile {
+        p:nth-of-type(1), p:nth-of-type(3) {
+            padding-bottom: 20px;
+        }
+        p:nth-of-type(4) {
+            padding-bottom: 40px;
+        }
+    }
+    @include tablet {
+        p:nth-of-type(1), p:nth-of-type(3) {
+            padding-bottom: 20px;   
+        }
+    }
+}
+
+.footer__bandsite p{
+    @include mobile {
+        padding-bottom: 20px;
+        font-size: 1.875rem;
+    }
+    @include tablet {
+        padding-left: 36px;
+    }
+}
