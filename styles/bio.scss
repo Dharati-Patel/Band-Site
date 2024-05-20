@@ -34,7 +34,9 @@
     font-family: "AvenirNext_regular", sans-serif;
     font-weight: 700;
     height: 100%;
-    max-width: 100%;
+    width: 100%;
+    
+
     
     @include mobile {
         display: flex;
@@ -185,27 +187,26 @@
 
 .about__head {
     font-family: "AvenirNext_regular", sans-serif;
-    
     font-weight: 700;
 
     @include mobile {
         font-size: 2.5rem;
         padding-top: 24px;
-        padding-bottom: 16px;
+        // padding-bottom: 16px;
         padding-left: 16px;
     }
 
     @include tablet {
         font-size: 3.75rem;
         padding-top: 48px;
-        padding-bottom: 36px;
+        // padding-bottom: 36px;
         padding-left: 36px;
     }
 
     @include desktop {
         font-size: 3.75rem;
         padding-top: 48px;
-        padding-bottom: 36px;
+        // padding-bottom: 36px;
         padding-left: 36px;
     }
 }
@@ -218,7 +219,7 @@
 
 .about__image {
    text-align: center;
-   padding: 16px;
+//    padding: 20px;
    box-sizing: border-box;
 
    img {
@@ -226,24 +227,162 @@
     // height: 700px;
 
     @include mobile {
-        height: 500px;
-        max-width: 767px;
+        height: auto;
+        width: 100%;
+        padding: 16px;
     }
 
     @include tablet {
-        height: 700px;
-        max-width: 1024px;
+        height: auto;
+        width: 80%;
+        padding: 36px;
     }
     @include desktop {
-        height: 700px;
-        max-width: 1920px;
+        height: auto;
+        width: 80%;
+        padding: 36px;
     }
    }
 }
 
 .about__text p {
-    font-family: "AvenirNext_demi", sans-serif;
-    font-size: .875rem;
+    font-family: "AvenirNext_bold", sans-serif;
+    font-weight: 700;
+    
+    @include mobile {
+        font-size: 1.5625rem;
+        justify-content: center;
+        line-height: 32px;
+        padding: 0 16px;
+    }
+    @include tablet {
+        font-size: 1.875rem;
+        line-height: 40px;
+        padding: 0 36px;
+    }
+    @include desktop {
+        font-size: 1.875rem;
+        line-height: 40px;
+        padding: 0 36px;
+    } 
+}
+
+.about__description {
+    margin-top: 40px;
+
+    @include mobile {
+        p:nth-of-type(1) {
+            margin-bottom: 30px;
+        }
+    }
+    
+    
+    h6 {
+        font-family: "AvenirNext_demi", sans-serif;
+        margin-bottom: 20px;
+
+        @include mobile {
+            font-size: 2rem;
+            padding: 0 16px;
+        }
+        @include tablet {
+            font-size: 2.5rem;
+            padding: 0 36px;
+        }
+        @include desktop {
+            font-size: 2.5rem;
+            padding: 0 36px;
+        }
+    }    
+
+}
+
+.about__description--p {
+    display: flex;
+
+    @include mobile{
+        display: inline;
+    }
+
+    @include tablet {
+        display: flex;
+    }
+
+}
+.about__description--p p {
+    font-family: "AvenirNext_regular", sans-serif; 
     font-weight: 600;
 
+    @include mobile {
+       
+        font-size: 1.25rem;
+        line-height: 30px;
+        padding: 0 16px;
+    }
+    @include tablet {
+       
+        font-size: 1.875rem;
+        line-height: 40px;
+        padding: 0 36px;
+    }
+    @include  desktop{
+        font-size: 1.875rem;
+        line-height: 40px;
+        padding: 0 36px;
+       
+    }
+ }
+
+.photoGallery {
+    background-color: #FAFAFA;
+}
+
+ .photoGallery__head {
+    font-family: "AvenirNext_regular", sans-serif;
+    font-weight: 700;
+
+    @include mobile {
+        font-size: 2.5rem;
+        padding-top: 24px;
+        // padding-bottom: 16px;
+        padding-left: 16px;
+    }
+
+    @include tablet {
+        font-size: 3.125rem;
+        padding-top: 48px;
+        // padding-bottom: 36px;
+        padding-left: 36px;
+    }
+
+    @include desktop {
+        font-size: 3.125rem;
+        padding-top: 48px;
+        // padding-bottom: 36px;
+        padding-left: 36px;
+    }
+ }
+
+ .photoGallery__grid {
+    display: grid;
+    
+    padding: 16px;
+ }
+
+ .photoGallery__grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photoGallery__grid {
+    @include mobile {
+        grid-gap: 16px;
+        grid-template-columns: 1fr;
+    }
+    
+    @include tablet {
+        grid-gap: 36px;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

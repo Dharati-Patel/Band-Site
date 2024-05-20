@@ -28,7 +28,7 @@
   font-family: "AvenirNext_regular", sans-serif;
   font-weight: 700;
   height: 100%;
-  max-width: 100%;
+  width: 100%;
 }
 @media screen and (min-width: 320px) {
   .navigation {
@@ -42,7 +42,7 @@
     flex-direction: row;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280) {
   .navigation {
     display: flex;
     flex-direction: row;
@@ -65,7 +65,7 @@
     padding-left: 60px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280) {
   .navigation .logo {
     font-size: 3.75rem;
     line-height: 68%;
@@ -103,7 +103,7 @@
     font-weight: 600;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280) {
   .navigation__menu--name {
     font-size: 2.125rem;
     font-weight: 600;
@@ -127,7 +127,7 @@
     padding: 40px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280) {
   .navigation__menu--name a {
     padding: 40px;
   }
@@ -184,7 +184,7 @@
     font-weight: 700;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280) {
   .hero__image--text {
     font-size: 3.75rem;
     font-weight: 700;
@@ -199,7 +199,6 @@
   .about__head {
     font-size: 2.5rem;
     padding-top: 24px;
-    padding-bottom: 16px;
     padding-left: 16px;
   }
 }
@@ -207,15 +206,13 @@
   .about__head {
     font-size: 3.75rem;
     padding-top: 48px;
-    padding-bottom: 36px;
     padding-left: 36px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280) {
   .about__head {
     font-size: 3.75rem;
     padding-top: 48px;
-    padding-bottom: 36px;
     padding-left: 36px;
   }
 }
@@ -228,30 +225,178 @@
 
 .about__image {
   text-align: center;
-  padding: 16px;
   box-sizing: border-box;
 }
 @media screen and (min-width: 320px) {
   .about__image img {
-    height: 500px;
-    max-width: 767px;
+    height: auto;
+    width: 100%;
+    padding: 16px;
   }
 }
 @media screen and (min-width: 768px) {
   .about__image img {
-    height: 700px;
-    max-width: 1024px;
+    height: auto;
+    width: 80%;
+    padding: 36px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280) {
   .about__image img {
-    height: 700px;
-    max-width: 1920px;
+    height: auto;
+    width: 80%;
+    padding: 36px;
   }
 }
 
 .about__text p {
+  font-family: "AvenirNext_bold", sans-serif;
+  font-weight: 700;
+}
+@media screen and (min-width: 320px) {
+  .about__text p {
+    font-size: 1.5625rem;
+    justify-content: center;
+    line-height: 32px;
+    padding: 0 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__text p {
+    font-size: 1.875rem;
+    line-height: 40px;
+    padding: 0 36px;
+  }
+}
+@media screen and (min-width: 1280) {
+  .about__text p {
+    font-size: 1.875rem;
+    line-height: 40px;
+    padding: 0 36px;
+  }
+}
+
+.about__description {
+  margin-top: 40px;
+}
+@media screen and (min-width: 320px) {
+  .about__description p:nth-of-type(1) {
+    margin-bottom: 30px;
+  }
+}
+.about__description h6 {
   font-family: "AvenirNext_demi", sans-serif;
-  font-size: 0.875rem;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 320px) {
+  .about__description h6 {
+    font-size: 2rem;
+    padding: 0 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__description h6 {
+    font-size: 2.5rem;
+    padding: 0 36px;
+  }
+}
+@media screen and (min-width: 1280) {
+  .about__description h6 {
+    font-size: 2.5rem;
+    padding: 0 36px;
+  }
+}
+
+.about__description--p {
+  display: flex;
+}
+@media screen and (min-width: 320px) {
+  .about__description--p {
+    display: inline;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__description--p {
+    display: flex;
+  }
+}
+
+.about__description--p p {
+  font-family: "AvenirNext_regular", sans-serif;
   font-weight: 600;
+}
+@media screen and (min-width: 320px) {
+  .about__description--p p {
+    font-size: 1.25rem;
+    line-height: 30px;
+    padding: 0 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__description--p p {
+    font-size: 1.875rem;
+    line-height: 40px;
+    padding: 0 36px;
+  }
+}
+@media screen and (min-width: 1280) {
+  .about__description--p p {
+    font-size: 1.875rem;
+    line-height: 40px;
+    padding: 0 36px;
+  }
+}
+
+.photoGallery {
+  background-color: #FAFAFA;
+}
+
+.photoGallery__head {
+  font-family: "AvenirNext_regular", sans-serif;
+  font-weight: 700;
+}
+@media screen and (min-width: 320px) {
+  .photoGallery__head {
+    font-size: 2.5rem;
+    padding-top: 24px;
+    padding-left: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .photoGallery__head {
+    font-size: 3.125rem;
+    padding-top: 48px;
+    padding-left: 36px;
+  }
+}
+@media screen and (min-width: 1280) {
+  .photoGallery__head {
+    font-size: 3.125rem;
+    padding-top: 48px;
+    padding-left: 36px;
+  }
+}
+
+.photoGallery__grid {
+  display: grid;
+  padding: 16px;
+}
+
+.photoGallery__grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (min-width: 320px) {
+  .photoGallery__grid {
+    grid-gap: 16px;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  .photoGallery__grid {
+    grid-gap: 36px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }/*# sourceMappingURL=bio.css.map */
