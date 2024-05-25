@@ -1,0 +1,20 @@
+@use './partials/mixins' as *;
+@use './partials/colors' as *;
+@use './partials/fonts' as *;
+@use './partials/footer' as *;
+@use './partials/hero' as *;
+@use './partials/about' as *;
+@use './partials/navigation' as *;
+@use './partials/photogallery' as *;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
