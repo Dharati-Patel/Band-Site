@@ -1,0 +1,132 @@
+@use './colors' as *;
+@use './fonts' as *;
+@use './mixins' as *;
+
+.header {
+    height: 100%;
+    background-color: $BandSite-Black;
+    color: white;
+    width: 100vw;
+  
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        @include tablet {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    
+        &--container {
+            text-align: center;
+            padding: 1.5rem;
+            font-family: "AvenirNext_demi", "sans-serif";
+            font-weight: 700;  
+
+            @include tablet {
+                padding-left: 1.5625rem;
+            }
+
+            &-logo {
+                @include tablet {
+                    width: 6.25rem;
+                    margin: 0 1.25rem;
+                    padding: 0;
+                }
+                @include desktop {
+                    margin: 0 0 0 3rem;
+                }
+            }
+        }
+  
+        &--menu {
+            display: flex;
+            max-width: 100%;
+            align-items: center;
+            padding: 0;
+
+            &-item {
+                display: flex;
+                list-style-type: none;
+                text-decoration: none;
+                align-items: center;
+                text-align: center;
+                font-family: "AvenirNext_demi", "sans-serif";
+                font-weight: 600;
+                margin: 0;
+                padding: 0 1.25rem 0 1.25rem;
+
+                @include tablet {
+                    padding: 1.5rem 0 0 0;
+                }
+                
+                
+                &-list {
+                   padding: 0 1.5625rem 1rem 1.5625rem;
+                   position: relative;
+                
+                    a {
+                        color: $mercury;
+                        text-decoration: none;
+                        text-align: center;
+
+                         @include tablet {
+                            font-size: 1rem;
+                         }   
+  
+                        &:hover,
+                        &.active {
+                            color: white;
+                            font-weight: bold;
+                            border-bottom: 10px solid #ffffff;
+                            padding-bottom: 1rem;
+  
+                            &::after {
+                                content: '';
+                                display: block;
+                                height: .125rem;
+                                background-color: #ffffff;
+                                position: absolute;
+                                bottom: -0.5rem;
+                                left: 0;
+                                right: 0;
+                                min-width: 1rem; 
+                                max-width: 100%; 
+                            }
+                        }
+  
+                        &::after {
+                            content: '';
+                            display: block;
+                            height: .125rem;
+                            background-color: transparent;
+                            position: absolute;
+                            bottom: -0.5rem;
+                            left: 0;
+                            right: 0;
+                            transition: background-color 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

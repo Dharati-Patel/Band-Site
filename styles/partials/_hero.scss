@@ -1,0 +1,62 @@
+@use './colors' as *;
+@use './fonts' as *;
+@use './mixins' as *;
+
+.hero {
+    width: 100%;
+    height: 11.4375rem;
+    background-image: url("../../assets/images/hero-bio.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include tablet {
+        width: 100%;
+        height: 25rem;
+    }
+    @include desktop {
+        width: 100%;
+        height: 43.75rem;
+    }
+
+    &__image {
+        width: 100%;
+        height: 11.4375rem;
+        background-color: rgba($BandSite-Black, 0.5);
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+
+        @include tablet {
+            height: 25rem;
+        }
+        @include desktop {
+
+            height: 43.75rem;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        font-family: "AvenirNext_bold", sans-serif;
+        font-weight: 700;
+        font-size: 1.5625rem;
+        line-height: 2rem;
+        color: $white;
+        top: 40%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+    
+        @include tablet {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+        }
+        @include desktop {
+            top: 42%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
