@@ -10,6 +10,104 @@
   font-family: "AvenirNext_regular";
   src: url(../assets/fonts/AvenirNextLTPro.ttf) format("truetype");
 }
+.hero__shows {
+  width: 100%;
+  height: 18.75rem;
+  background-image: url("../../assets/images/hero-shows.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .hero__shows {
+    height: 31.25rem;
+  }
+}
+.hero__shows--container {
+  height: 18.75rem;
+  background-color: rgba(50, 50, 50, 0.5);
+  padding: 0 1rem 0 1rem;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .hero__shows--container {
+    height: 31.25rem;
+    padding: 0 2.25rem 0 2.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero__shows--container {
+    display: flex;
+    padding: 0 5.25rem 0 5.25rem;
+  }
+}
+.hero__shows--text-subtitle {
+  font-family: "AvenirNext_demi", sans-serif;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 3rem 0 0 0;
+}
+@media only screen and (min-width: 768px) {
+  .hero__shows--text-subtitle {
+    font-family: "AvenirNext_demi", sans-serif;
+    font-size: 1.5rem;
+    padding: 4rem 0 0 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero__shows--text-subtitle {
+    padding: 10rem 0 0 0;
+  }
+}
+.hero__shows--text-title {
+  font-family: "AvenirNext_bold", sans-serif;
+  color: #FFFFFF;
+  font-size: 1.56rem;
+  line-height: 2rem;
+  margin: 0;
+  padding: 1rem 0 1rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .hero__shows--text-title {
+    font-size: 3.75rem;
+    font-weight: 300;
+    width: 37.8125rem;
+    padding: 1rem 0 2rem 0;
+    line-height: 4.5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero__shows--text-title {
+    width: 39.8125rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero__shows--iframe {
+    height: 26.8125rem;
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+  }
+}
+.hero__shows--iframe-song {
+  width: 18rem;
+  height: 6rem;
+}
+@media only screen and (min-width: 768px) {
+  .hero__shows--iframe-song {
+    width: 27.25rem;
+    height: 9.125rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero__shows--iframe-song {
+    width: 29.6rem;
+    height: 7rem;
+  }
+}
+
 .footer {
   background-color: #323232;
 }
@@ -449,6 +547,11 @@
 @media only screen and (min-width: 768px) {
   .header__navigation--container {
     padding-left: 1.5625rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .header__navigation--container {
+    padding-left: 2.5rem;
   }
 }
 @media only screen and (min-width: 768px) {
