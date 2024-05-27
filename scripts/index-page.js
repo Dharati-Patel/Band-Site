@@ -20,7 +20,7 @@ let comments = [
     }
   ];
   
-  //Function start
+  //Function star
   function displayComments(arr) {
     
     let commentContainer = document.querySelector(".comment__default-comment");
@@ -75,10 +75,11 @@ let comments = [
   
   const form = document.querySelector(".comment__input-container");
   
-  
   form.addEventListener("submit", submitEvent => {
     
-    // submitEvent.preventDefault();
+   submitEvent.preventDefault();
+
+    alert("Submit");
   
     const newComment = {};
     newComment.name = submitEvent.target.name.value;
@@ -143,5 +144,5 @@ let comments = [
   
     
     let clearInput = document.querySelector(".comment__input-container");
-    clearInput.reset();
+    //clearInput.reset();
   });
