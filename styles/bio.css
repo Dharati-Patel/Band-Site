@@ -592,10 +592,26 @@
   background-color: #FFFFFF;
   margin: 0 1rem 0 1rem;
 }
+@media only screen and (min-width: 768px) {
+  .comment {
+    margin: 0 1.5rem 0 1.5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comment {
+    margin: 0 11.25rem 0 11.25rem;
+  }
+}
 .comment__title {
   font-family: "AvenirNext_bold", sans-serif;
   font-size: 1.5rem;
   margin: 2rem 0 2.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .comment__title {
+    font-size: 2.25rem;
+    margin: 3rem 0 3.5rem;
+  }
 }
 .comment__image {
   width: 3rem;
@@ -603,10 +619,21 @@
   border-radius: 2rem;
   margin-top: 1.4rem;
 }
+@media only screen and (min-width: 768px) {
+  .comment__image {
+    margin: 1.4rem 1.25rem 0 0;
+  }
+}
 .comment__name-container {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #E1E1E1;
+}
+@media only screen and (min-width: 768px) {
+  .comment__name-container {
+    justify-content: center;
+    border: none;
+  }
 }
 .comment__input-container {
   display: flex;
@@ -629,19 +656,51 @@
   border-color: #AFAFAF;
   resize: none;
 }
+@media only screen and (min-width: 768px) {
+  .comment__text-container {
+    font-size: 1rem;
+    width: 28.75rem;
+  }
+}
 .comment__text-container:focus {
   border: 2px solid #323232;
   outline-width: 0;
+}
+@media only screen and (min-width: 768px) {
+  .comment__text-container:focus {
+    border: 1px solid #323232;
+  }
 }
 .comment__text-container--one {
   margin: 0 0 0.5rem 0;
   height: 2.5rem;
   padding: 0.625rem;
 }
+@media only screen and (min-width: 768px) {
+  .comment__text-container--one {
+    margin: 0 0 1.5rem 0;
+    height: 3rem;
+    padding: 0.625rem 1rem 0 1rem;
+  }
+}
 .comment__text-container--two {
   padding: 0.625rem 0.625rem 3.125rem 0.625rem;
   margin: 0 0 0.5rem 0;
   height: 5rem;
+}
+@media only screen and (min-width: 768px) {
+  .comment__text-container--two {
+    padding: 0.625rem 1rem 0 1rem;
+    height: 6rem;
+    margin: 0 0 1.5rem 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comment__text-container--two {
+    padding: 0.625rem 1rem 0 1rem;
+    height: 6rem;
+    margin: 0 0 1.5rem 0;
+  }
 }
 .comment__button {
   font-family: "AvenirNext_demi", sans-serif;
@@ -656,15 +715,42 @@
   outline-width: 0;
   padding: 0;
 }
+@media only screen and (min-width: 768px) {
+  .comment__button {
+    font-size: 1rem;
+    height: 3rem;
+    width: 10rem;
+    margin: 0 0 1.5rem 0;
+    align-self: flex-end;
+  }
+}
 .comment__button:hover {
   background-color: #000000;
 }
 .comment__default {
   border-bottom: 1px solid #E1E1E1;
 }
+@media only screen and (min-width: 768px) {
+  .comment__default {
+    width: 33rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comment__default-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .comment__header {
   display: flex;
   justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  .comment__header {
+    position: relative;
+    justify-content: flex-start;
+  }
 }
 .comment__header--image-one {
   height: 3rem;
@@ -677,12 +763,23 @@
   border-radius: 2rem;
   margin-top: 1.5rem;
 }
+@media only screen and (min-width: 768px) {
+  .comment__header--image-one {
+    position: absolute;
+  }
+}
 .comment__header--name {
   color: #323232;
   font-family: "AvenirNext_demi", sans-serif;
   font-size: 0.8125rem;
   padding: 1.75rem 0 0 1rem;
   margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .comment__header--name {
+    font-size: 1rem;
+    padding: 1.75rem 1rem 0 3.9375rem;
+  }
 }
 .comment__header--date {
   color: #AFAFAF;
@@ -691,8 +788,19 @@
   margin: 0;
   padding: 1.75rem 0 0 0;
 }
+@media only screen and (min-width: 768px) {
+  .comment__header--date {
+    font-size: 1rem;
+  }
+}
 .comment__text-container-default {
   display: flex;
+}
+@media only screen and (min-width: 768px) {
+  .comment__text-container-default {
+    justify-content: flex-end;
+    border-bottom: 1px solid #E1E1E1;
+  }
 }
 .comment__text-container-default--comment {
   word-wrap: break-word;
@@ -703,216 +811,26 @@
   margin: 0;
   padding: 1rem 0 1.5rem 1rem;
 }
-
-/* tablet */
 @media only screen and (min-width: 768px) {
-  .comment {
-    background-color: #FFFFFF;
-    margin: 0 1.5rem 0 1.5rem;
+  .comment__text-container-default--comment {
+    width: 29rem;
+    font-size: 0.875rem;
+    padding: 1rem 0 1.5rem 0;
   }
-  .comment__title {
-    font-family: "AvenirNext_bold", sans-serif;
-    font-size: 2.25rem;
-    margin: 3rem 0 3.5rem;
-  }
-  .comment__image {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 2rem;
-    margin: 1.4rem 1.25rem 0 0;
-  }
-  .comment__name-container {
-    display: flex;
-    justify-content: center;
-    border: none;
-  }
+}
+@media only screen and (min-width: 768px) {
   .comment__border-container {
     display: flex;
     justify-content: center;
   }
+}
+@media only screen and (min-width: 768px) {
   .comment__border {
     width: 33rem;
     border: 1px solid #E1E1E1;
   }
-  .comment__input-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .comment__input-container--text {
-    font-family: "AvenirNext_demi", sans-serif;
-    color: #AFAFAF;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-    margin: 0 0 0.5rem 0;
-  }
-  .comment__text-container {
-    font-family: "AvenirNext_regular", sans-serif;
-    font-size: 1rem;
-    border: 1px solid #323232;
-    border-radius: 0.25rem;
-    width: 28.75rem;
-    background-color: #FAFAFA;
-    border-color: #AFAFAF;
-    resize: none;
-  }
-  .comment__text-container:focus {
-    border: 1px solid #323232;
-    outline-width: 0;
-  }
-  .comment__text-container--one {
-    margin: 0 0 1.5rem 0;
-    height: 3rem;
-    padding: 0.625rem 1rem 0 1rem;
-  }
-  .comment__text-container--two {
-    padding: 0.625rem 1rem 0 1rem;
-    height: 6rem;
-    margin: 0 0 1.5rem 0;
-  }
-  .comment__button {
-    font-family: "AvenirNext_demi", sans-serif;
-    font-size: 1rem;
-    background-color: #323232;
-    border-style: none;
-    height: 3rem;
-    border-radius: 0.25rem;
-    color: #FFFFFF;
-    text-align: center;
-    width: 10rem;
-    margin: 0 0 1.5rem 0;
-    outline-width: 0;
-    padding: 0;
-    align-self: flex-end;
-  }
-  .comment__button:hover {
-    background-color: #000000;
-  }
-  .comment__default-comment {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .comment__default {
-    width: 528px;
-  }
-  .comment__header {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .comment__header--image-one {
-    position: absolute;
-    height: 3rem;
-    width: 3rem;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 2rem;
-    margin-top: 1.5rem;
-  }
-  .comment__header--name {
-    color: #323232;
-    font-family: "AvenirNext_demi", sans-serif;
-    font-size: 1rem;
-    padding: 1.75rem 1rem 0 3.9375rem;
-    margin: 0;
-  }
-  .comment__header--date {
-    color: #AFAFAF;
-    font-family: "AvenirNext_regular", sans-serif;
-    font-size: 1rem;
-    margin: 0;
-    padding: 1.75rem 0 0 0;
-  }
-  .comment__text-container-default {
-    display: flex;
-    justify-content: flex-end;
-    border-bottom: 1px solid #E1E1E1;
-  }
-  .comment__text-container-default--comment {
-    color: #323232;
-    width: 29rem;
-    font-size: 0.875rem;
-    font-family: "AvenirNext_regular", sans-serif;
-    margin: 0;
-    padding: 1rem 0 1.5rem 0;
-  }
 }
-/* desktop */
-@media only screen and (min-width: 1280px) {
-  .comment {
-    background-color: #FFFFFF;
-    margin: 0 11.25rem 0 11.25rem;
-  }
-  .comment__title {
-    font-family: "AvenirNext_bold", sans-serif;
-    font-size: 2.25rem;
-    margin: 3rem 0 3.5rem;
-  }
-  .comment__image {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 2rem;
-    margin: 1.4rem 1.25rem 0 0;
-  }
-  .comment__name-container {
-    display: flex;
-    justify-content: center;
-  }
-  .comment__input-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .comment__input-container--text {
-    font-family: "AvenirNext_demi", sans-serif;
-    color: #AFAFAF;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-    margin: 0 0 0.5rem 0;
-  }
-  .comment__text-container {
-    font-family: "AvenirNext_regular", sans-serif;
-    font-size: 0.8125rem;
-    border: 1px solid #323232;
-    border-radius: 0.25rem;
-    width: 28.75rem;
-    background-color: #FAFAFA;
-    border-color: #AFAFAF;
-    resize: none;
-  }
-  .comment__text-container:focus {
-    border: 1px solid #323232;
-    outline-width: 0;
-  }
-  .comment__text-container--one {
-    margin: 0 0 1.5rem 0;
-    height: 3rem;
-    padding: 0.625rem 1rem 0 1rem;
-  }
-  .comment__text-container--two {
-    padding: 0.625rem 1rem 0 1rem;
-    height: 6rem;
-    margin: 0 0 1.5rem 0;
-  }
-  .comment__button {
-    font-family: "AvenirNext_demi", sans-serif;
-    font-size: 1rem;
-    background-color: #323232;
-    border-style: none;
-    height: 3rem;
-    border-radius: 0.25rem;
-    color: #FFFFFF;
-    text-align: center;
-    width: 10rem;
-    margin: 0 0 1.5rem 0;
-    outline-width: 0;
-    padding: 0;
-    align-self: flex-end;
-  }
-  .comment__button:hover {
-    background-color: #000000;
-  }
-}
+
 html, body {
   margin: 0;
   padding: 0;
