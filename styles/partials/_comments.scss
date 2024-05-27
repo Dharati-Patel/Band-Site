@@ -6,11 +6,24 @@
 .comment {
     background-color: $white;
     margin: 0 1rem 0 1rem;
+
+    @include tablet {
+      margin: 0 1.5rem 0 1.5rem;
+    }
+
+    @include desktop {
+      margin: 0 11.25rem 0 11.25rem;
+    }
   
     &__title {
       font-family: "AvenirNext_bold", sans-serif;
       font-size: 1.5rem;
       margin: 2rem 0 2.5rem;
+
+      @include tablet {
+        font-size: 2.25rem;
+        margin: 3rem 0 3.5rem;
+      }
     }
   
     &__image {
@@ -18,12 +31,21 @@
       height: 3rem;
       border-radius: 2rem;
       margin-top: 1.4rem;
+
+      @include tablet {
+        margin: 1.4rem 1.25rem 0 0;
+      }
     }
   
     &__name-container {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid $mercury;
+
+      @include tablet {
+        justify-content: center;
+        border: none;
+      }
     }
   
     &__input-container {
@@ -47,19 +69,48 @@
       background-color: $alabaster;
       border-color: $silver;
       resize: none;
+
+      @include tablet {
+        font-size: 1rem;
+        width: 28.75rem;
+      }
+
       &:focus {
         border: 2px solid $BandSite-Black;
         outline-width: 0;
+
+        @include tablet {
+          border: 1px solid $BandSite-Black;
+        }
+
       }
       &--one {
         margin: 0 0 0.5rem 0;
         height: 2.5rem;
         padding: 0.625rem;
+
+        @include tablet {
+          margin: 0 0 1.5rem 0;
+          height: 3rem;
+          padding: 0.625rem 1rem 0 1rem;
+        }
       }
       &--two {
         padding: 0.625rem 0.625rem 3.125rem 0.625rem;
         margin: 0 0 0.5rem 0;
         height: 5rem;
+
+        @include tablet {
+          padding: 0.625rem 1rem 0 1rem;
+          height: 6rem;
+          margin: 0 0 1.5rem 0;
+        }
+
+        @include desktop {
+          padding: 0.625rem 1rem 0 1rem;
+          height: 6rem;
+          margin: 0 0 1.5rem 0;
+        }
       }
     }
   
@@ -75,6 +126,14 @@
       margin: 0 0 2rem 0;
       outline-width: 0;
       padding: 0;
+
+      @include tablet {
+        font-size: 1rem;
+        height: 3rem;
+        width: 10rem;
+        margin: 0 0 1.5rem 0;
+        align-self: flex-end;
+      }
       &:hover {
         background-color: $BandSite-DarkBlack;
       }
@@ -82,10 +141,28 @@
   
     &__default {
       border-bottom: 1px solid $mercury;
+
+      @include tablet {
+        width: 33rem;
+      }
+    }
+
+    &__default-comment {
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }  
     }
     &__header {
       display: flex;
       justify-content: space-between;
+
+      @include tablet {
+        position: relative;
+        justify-content: flex-start;
+      }
+
       &--image-one {
         height: 3rem;
         width: 3rem;
@@ -96,6 +173,10 @@
         float: left;
         border-radius: 2rem;
         margin-top: 1.5rem;
+
+        @include tablet {
+          position: absolute;
+        }
       }
       &--name {
         color: $BandSite-Black;
@@ -103,6 +184,11 @@
         font-size: 0.8125rem;
         padding: 1.75rem 0 0 1rem;
         margin: 0;
+
+        @include tablet {
+          font-size: 1rem;
+          padding: 1.75rem 1rem 0 3.9375rem;
+        }
       }
       &--date {
         color: $silver;
@@ -110,11 +196,20 @@
         font-size: 0.8125rem;
         margin: 0;
         padding: 1.75rem 0 0 0;
+
+        @include tablet {
+          font-size: 1rem;
+        }
       }
     }
   
     &__text-container-default {
       display: flex;
+
+      @include tablet {
+        justify-content: flex-end;
+        border-bottom: 1px solid $mercury;
+      }
       &--comment {
         word-wrap: break-word;
         width: 96%;
@@ -123,242 +218,34 @@
         font-family: "AvenirNext_regular", sans-serif;
         margin: 0;
         padding: 1rem 0 1.5rem 1rem;
-      }
-    }
-  }
-  
- 
-  
-  /* tablet */
-  
-  @include tablet {
-    .comment {
-      background-color: $white;
-      margin: 0 1.5rem 0 1.5rem;
-  
-      &__title {
-        font-family: "AvenirNext_bold", sans-serif;
-        font-size: 2.25rem;
-        margin: 3rem 0 3.5rem;
-      }
-  
-      &__image {
-        width: 3rem;
-        height: 3rem;
-        border-radius: 2rem;
-        margin: 1.4rem 1.25rem 0 0;
-      }
-  
-      &__name-container {
-        display: flex;
-        justify-content: center;
-        border: none;
-      }
-  
-      &__border-container {
-        display: flex;
-        justify-content: center;
-      }
-  
-      &__border {
-        width: 33rem;
-        border: 1px solid $mercury;
-      }
-  
-      &__input-container {
-        display: flex;
-        flex-direction: column;
-        &--text {
-          font-family: "AvenirNext_demi", sans-serif;
-          color: $silver;
-          font-size: 0.75rem;
-          line-height: 1.25rem;
-          margin: 0 0 0.5rem 0;
-        }
-      }
-  
-      &__text-container {
-        font-family: "AvenirNext_regular", sans-serif;
-        font-size: 1rem;
-        border: 1px solid $BandSite-Black;
-        border-radius: 0.25rem;
-        width: 28.75rem;
-        background-color: $alabaster;
-        border-color: $silver;
-        resize: none;
-        &:focus {
-          border: 1px solid $BandSite-Black;
-          outline-width: 0;
-        }
-        &--one {
-          margin: 0 0 1.5rem 0;
-          height: 3rem;
-          padding: 0.625rem 1rem 0 1rem;
-        }
-        &--two {
-          padding: 0.625rem 1rem 0 1rem;
-          height: 6rem;
-          margin: 0 0 1.5rem 0;
-        }
-      }
-  
-      &__button {
-        font-family: "AvenirNext_demi", sans-serif;
-        font-size: 1rem;
-        background-color: $BandSite-Black;
-        border-style: none;
-        height: 3rem;
-        border-radius: 0.25rem;
-        color: $white;
-        text-align: center;
-        width: 10rem;
-        margin: 0 0 1.5rem 0;
-        outline-width: 0;
-        padding: 0;
-        align-self: flex-end;
-        &:hover {
-          background-color: $BandSite-DarkBlack;
-        }
-      }
-  
-      &__default-comment {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      &__default {
-        width: 528px;
-      }
-  
-      &__header {
-        position: relative;
-        display: flex;
-        justify-content: flex-start;
-        &--image-one {
-          position: absolute;
-          height: 3rem;
-          width: 3rem;
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          border-radius: 2rem;
-          margin-top: 1.5rem;
-        }
-        &--name {
-          color: $BandSite-Black;
-          font-family: "AvenirNext_demi", sans-serif;
-          font-size: 1rem;
-          padding: 1.75rem 1rem 0 3.9375rem;
-          margin: 0;
-        }
-        &--date {
-          color: $silver;
-          font-family: "AvenirNext_regular", sans-serif;
-          font-size: 1rem;
-          margin: 0;
-          padding: 1.75rem 0 0 0;
-        }
-      }
-  
-      &__text-container-default {
-        display: flex;
-        justify-content: flex-end;
-        border-bottom: 1px solid $mercury;
-        &--comment {
-          color: $BandSite-Black;
+
+        @include tablet {
           width: 29rem;
           font-size: 0.875rem;
-          font-family: "AvenirNext_regular", sans-serif;
-          margin: 0;
           padding: 1rem 0 1.5rem 0;
         }
       }
     }
-  }
-  
-  
-  
-  /* desktop */
-  
-  @include desktop {
-    .comment {
-      background-color: $white;
-      margin: 0 11.25rem 0 11.25rem;
-  
-      &__title {
-        font-family: "AvenirNext_bold", sans-serif;
-        font-size: 2.25rem;
-        margin: 3rem 0 3.5rem;
-      }
-  
-      &__image {
-        width: 3rem;
-        height: 3rem;
-        border-radius: 2rem;
-        margin: 1.4rem 1.25rem 0 0;
-      }
-  
-      &__name-container {
+
+    &__border-container {
+
+      @include tablet {
         display: flex;
         justify-content: center;
       }
-  
-      &__input-container {
-        display: flex;
-        flex-direction: column;
-        &--text {
-          font-family: "AvenirNext_demi", sans-serif;
-          color: $silver;
-          font-size: 0.75rem;
-          line-height: 1.25rem;
-          margin: 0 0 0.5rem 0;
-        }
-      }
-  
-      &__text-container {
-        font-family: "AvenirNext_regular", sans-serif;
-        font-size: 0.8125rem;
-        border: 1px solid $BandSite-Black;
-        border-radius: 0.25rem;
-        width: 28.75rem;
-        background-color: $alabaster;
-        border-color: $silver;
-        resize: none;
-        &:focus {
-          border: 1px solid $BandSite-Black;
-          outline-width: 0;
-        }
-        &--one {
-          margin: 0 0 1.5rem 0;
-          height: 3rem;
-          padding: 0.625rem 1rem 0 1rem;
-        }
-        &--two {
-          padding: 0.625rem 1rem 0 1rem;
-          height: 6rem;
-          margin: 0 0 1.5rem 0;
-        }
-      }
-  
-      &__button {
-        font-family: "AvenirNext_demi", sans-serif;
-        font-size: 1rem;
-        background-color: $BandSite-Black;
-        border-style: none;
-        height: 3rem;
-        border-radius: 0.25rem;
-        color: $white;
-        text-align: center;
-        width: 10rem;
-        margin: 0 0 1.5rem 0;
-        outline-width: 0;
-        padding: 0;
-        align-self: flex-end;
-        &:hover {
-          background-color: $BandSite-DarkBlack;
-        }
+    }
+
+    &__border {
+
+      @include tablet {
+        width: 33rem;
+        border: 1px solid $mercury;
       }
     }
   }
+  
  
+  
+ 
+  
+  
