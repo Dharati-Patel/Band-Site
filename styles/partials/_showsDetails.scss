@@ -1,0 +1,223 @@
+@use './colors' as *;
+@use './fonts' as *;
+@use './mixins' as *;
+
+.shows {
+    margin: 0 1rem;
+
+    @include tablet {
+        margin: 0 2.25rem;
+    }
+
+    @include desktop {
+        margin: 0 11.25rem;
+    }
+
+    &__container {
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+        &--header {
+
+            &-title {
+                font-family: "AvenirNext_bold", "sans-serif";
+                color: $BandSite-Black;
+                font-size: 1.5rem;
+                margin: 2rem 0 0 0;
+
+                @include tablet {
+                    font-size: 2.25rem;
+                    margin: 2rem 0 2rem 0;
+                }
+            }
+        }
+    }
+
+    &__description {
+
+        @include desktop {
+            width: 50.25rem;
+        }
+
+        &--label {
+            visibility: hidden;
+            height: 1px;
+            width: 10px;
+
+            @include tablet {
+                visibility: visible;
+                display: flex;
+                justify-content: space-between;
+                font-family: "AvenirNext_demi", "sans-serif";
+                font-size: .75rem;
+                color: $silver;
+            }
+
+            @include desktop {
+                align-items: flex-end;
+                margin-top: 1rem;
+            }
+
+            &-date {
+
+                @include tablet {
+                    margin-right: 9.375rem;
+                    align-self: center;
+                }
+                @include desktop {
+                    margin: 5rem 0 0 2.5rem;
+                }
+            }
+
+            &-venue {
+                @include tablet {
+                    margin-right: 9.375rem;
+                    align-self: center;
+                }
+                @include desktop {
+                    margin: 5rem 0 0 12.8125rem;
+                }
+            }
+
+            &-location {
+                @include tablet {
+                    margin: 0;
+                    align-self: center;    
+                }
+                @include desktop {
+                    margin: 5rem 0 0 10.625rem;
+                }
+            }
+
+            &-button {
+                visibility: hidden;
+                font-family: "AvenirNext_demi", "sans-serif";
+                font-size: 0.8125rem;
+                width: 160px;
+                height: 48px;
+                color: $white;
+                background-color: $BandSite-Black;
+                border-radius: 0.3125rem;
+                border: none;
+            }
+        }
+    }
+    &__data {
+    
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $silver;
+        }
+        
+        &--date-label {
+            font-family: "AvenirNext_demi", "sans-serif";
+            font-size: 0.8125rem;
+            color: $silver;
+            margin: 1rem 0 1rem 0;
+
+            @include tablet {
+                visibility: hidden;
+                margin: 0;
+                width: 0px;
+            }
+        }
+
+        &--date {
+            font-family: "AvenirNext_demi", "sans-serif";
+            font-size: 0.875rem;
+            margin: 0 0 1.5rem 0;
+
+            @include tablet {
+                margin: 0;
+                text-align: left;
+            }
+
+            @include desktop {
+                margin-top: 3.75rem;
+                margin-bottom: 3.75rem;
+            }
+        }
+
+        &--venue-label {
+            font-family: "AvenirNext_demi", "sans-serif";
+            font-size: 0.8125rem;
+            color: $silver;
+            margin: 0 0 1rem 0;
+
+            @include tablet {
+                visibility: hidden;
+            }
+            @include desktop {
+                margin: 0;
+            }
+        }
+
+        &--venue {
+            font-family: "AvenirNext_regular", "sans-serif";
+            font-size: 0.8125rem;
+            margin: 0 0 1.5rem 0;
+
+            @include tablet {
+                margin: 0;
+                text-align: left;
+            }
+
+        }
+
+        &--location-label {
+            font-family: "AvenirNext_demi", "sans-serif";
+            font-size: 0.8125rem;
+            color: $silver;
+            margin: 0 0 1rem 0;
+
+            @include tablet {
+                visibility: hidden;
+            }
+        }
+
+        &--location {
+            font-family: "AvenirNext_regular", "sans-serif";
+            font-size: 0.8125rem;
+            margin: 0 0 2rem 0;
+
+            @include tablet {
+                margin: 0;
+                text-align: left;
+            }
+        }
+
+        &--button-div {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $silver;
+
+            @include tablet {
+                padding:  1rem 0;
+                border: none;
+            }
+        }
+
+        &--button {
+            font-family: "AvenirNext_demi", "sans-serif";
+            font-size: 0.8125rem;
+            width: 288px;
+            height: 48px;
+            color: $white;
+            background-color: $BandSite-Black;
+            border-radius: 0.3125rem;
+            border: none;
+            &:hover {
+                background-color: $BandSite-DarkBlack;
+                box-shadow: 2px 2px 20px;
+            }
+
+            @include tablet {
+                width: 160px;
+                height: 48px;
+            }
+        }
+    }
+}

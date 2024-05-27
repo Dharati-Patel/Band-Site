@@ -69,13 +69,13 @@ function ShowsDetail(arr) {
 
     //location label
     let locationLabel = document.createElement("h3");
-    locationLabel.classList.add("shows__header-container--location");
+    locationLabel.classList.add("shows__description--label-location");
     detailLabel.appendChild(locationLabel);
     locationLabel.innerText = "LOCATION";
 
     //button
     let buttonLabel = document.createElement("button");
-    buttonLabel.classList.add("shows__header-container--button");
+    buttonLabel.classList.add("shows__description--label-button");
     detailLabel.appendChild(buttonLabel);
 
     buttonLabel.innerText = "BUY TICKETS";
