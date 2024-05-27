@@ -1,12 +1,13 @@
 @use './partials/mixins' as *;
 @use './partials/colors' as *;
 @use './partials/fonts' as *;
+@use './partials/hero-shows' as *;
 @use './partials/footer' as *;
 @use './partials/hero' as *;
 @use './partials/about' as *;
 @use './partials/navigation' as *;
 @use './partials/photogallery' as *;
-@use './partials/comments' as *;
+@use './partials/showsDetails' as *;
 
 html, body {
     margin: 0;
@@ -19,7 +20,3 @@ html, body {
 *::after {
     box-sizing: inherit;
 }
-
-
-
-
