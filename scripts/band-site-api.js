@@ -1,17 +1,30 @@
-
-
-const apiKey = "3c710c1a-8ca8-4bae-93af-65c38573275d";
-
-const fetchComments = async () => {
-    try {
-        
-        const apiUrl = `https://unit-2-project-api-25c1595833b2.herokuapp.com/comments?api_key=${apiKey}`;
-        const response = await axios.get(apiUrl);
-        
-        console.log(response);
-       
-    } catch (error) {
-        console.log(error);
+class BandSiteApi {
+    constructor(apiKey) {
+        this.apiKey = apiKey;
+        this.baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com/comments";
     }
-};
-fetchComments();
+
+    async postComment(comment) {
+        try {
+            const response = await axios.post(`${this.baseUrl}?api_key=${this.apiKey}`, comment);
+            console.log('Post Comment Response:', response.data);
+            return response.data;
+        } catch (error) {
+            console.log('Error posting comment:', error);
+        }
+    }
+
+    async getComment() {
+        try {
+            const response = await axios.get(`${this.baseUrl}?api_key=${this.apiKey}`);
+            //sort comment from newest to oldest
+            console.log(response.data);
+            return response.data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+        } catch (error) {
+            console.log("Error fetching comments:", error);
+        }
+    }
+}
+
+export default BandSiteApi;
+
