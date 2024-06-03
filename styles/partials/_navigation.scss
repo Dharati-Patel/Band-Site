@@ -75,46 +75,36 @@
                         text-decoration: none;
                         text-align: center;
 
-                         @include tablet {
+                        @include tablet {
                             font-size: 1rem;
-                         }   
+                        }   
   
-                        &:hover,
-                        &.active {
+                        &:hover {
                             color: white;
                             font-weight: bold;
-                            border-bottom: 10px solid #ffffff;
-                            padding-bottom: 1rem;
-  
-                            &::after {
-                                content: '';
-                                display: block;
-                                height: .125rem;
-                                background-color: #ffffff;
-                                position: absolute;
-                                bottom: -0.5rem;
-                                left: 0;
-                                right: 0;
-                                min-width: 1rem; 
-                                max-width: 100%; 
+                            border-bottom: 2px solid #ffffff;
+                            padding-bottom: 16px;
+
+                            @include tablet {
+                                padding-bottom: 27px;
                             }
-                        }
-  
-                        &::after {
-                            content: '';
-                            display: block;
-                            height: .125rem;
-                            background-color: transparent;
-                            position: absolute;
-                            bottom: -0.5rem;
-                            left: 0;
-                            right: 0;
-                            transition: background-color 0.3s;
                         }
                     }
                 }
             }
         }
+    }
+}
+
+.header__navigation--menu {
+    li.active a {
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 16px;
+        
+        @include tablet {
+            padding-bottom: 28px;
+        }
+        
     }
 }
   

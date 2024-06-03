@@ -390,6 +390,7 @@
 }
 
 .about {
+  background-color: #FFFFFF;
   margin: 0 1rem;
 }
 @media only screen and (min-width: 768px) {
@@ -602,34 +603,26 @@
     font-size: 1rem;
   }
 }
-.header__navigation--menu-item-list a:hover, .header__navigation--menu-item-list a.active {
+.header__navigation--menu-item-list a:hover {
   color: white;
   font-weight: bold;
-  border-bottom: 10px solid #ffffff;
-  padding-bottom: 1rem;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 16px;
 }
-.header__navigation--menu-item-list a:hover::after, .header__navigation--menu-item-list a.active::after {
-  content: "";
-  display: block;
-  height: 0.125rem;
-  background-color: #ffffff;
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  right: 0;
-  min-width: 1rem;
-  max-width: 100%;
+@media only screen and (min-width: 768px) {
+  .header__navigation--menu-item-list a:hover {
+    padding-bottom: 27px;
+  }
 }
-.header__navigation--menu-item-list a::after {
-  content: "";
-  display: block;
-  height: 0.125rem;
-  background-color: transparent;
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  right: 0;
-  transition: background-color 0.3s;
+
+.header__navigation--menu li.active a {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .header__navigation--menu li.active a {
+    padding-bottom: 28px;
+  }
 }
 
 .photoGallery {
@@ -717,6 +710,11 @@
   }
 }
 @media only screen and (min-width: 1280px) {
+  .shows__container--header-title {
+    margin: 20px 0 2rem 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
   .shows__description {
     width: 50.25rem;
   }
@@ -744,24 +742,24 @@
 }
 @media only screen and (min-width: 768px) {
   .shows__description--label-date {
-    margin-right: 9.375rem;
+    margin: 0 8.125rem 0 0;
     align-self: center;
   }
 }
 @media only screen and (min-width: 1280px) {
   .shows__description--label-date {
-    margin: 5rem 0 0 2.5rem;
+    margin: 5rem 0 1.875rem 2.5rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .shows__description--label-venue {
-    margin-right: 9.375rem;
+    margin-right: 95px;
     align-self: center;
   }
 }
 @media only screen and (min-width: 1280px) {
   .shows__description--label-venue {
-    margin: 5rem 0 0 12.8125rem;
+    margin: 5rem 0 1.875rem 12.5rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -772,7 +770,7 @@
 }
 @media only screen and (min-width: 1280px) {
   .shows__description--label-location {
-    margin: 5rem 0 0 10.625rem;
+    margin: 5rem 0 1.875rem 175px;
   }
 }
 .shows__description--label-button {
@@ -792,6 +790,12 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #AFAFAF;
+    margin-right: 6.875rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .shows__data {
+    margin: 0;
   }
 }
 .shows__data--date-label {
@@ -901,6 +905,7 @@
   .shows__data--button {
     width: 160px;
     height: 48px;
+    margin-left: 0.625rem;
   }
 }
 

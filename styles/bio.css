@@ -292,6 +292,7 @@
 }
 
 .about {
+  background-color: #FFFFFF;
   margin: 0 1rem;
 }
 @media only screen and (min-width: 768px) {
@@ -504,34 +505,26 @@
     font-size: 1rem;
   }
 }
-.header__navigation--menu-item-list a:hover, .header__navigation--menu-item-list a.active {
+.header__navigation--menu-item-list a:hover {
   color: white;
   font-weight: bold;
-  border-bottom: 10px solid #ffffff;
-  padding-bottom: 1rem;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 16px;
 }
-.header__navigation--menu-item-list a:hover::after, .header__navigation--menu-item-list a.active::after {
-  content: "";
-  display: block;
-  height: 0.125rem;
-  background-color: #ffffff;
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  right: 0;
-  min-width: 1rem;
-  max-width: 100%;
+@media only screen and (min-width: 768px) {
+  .header__navigation--menu-item-list a:hover {
+    padding-bottom: 27px;
+  }
 }
-.header__navigation--menu-item-list a::after {
-  content: "";
-  display: block;
-  height: 0.125rem;
-  background-color: transparent;
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  right: 0;
-  transition: background-color 0.3s;
+
+.header__navigation--menu li.active a {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .header__navigation--menu li.active a {
+    padding-bottom: 28px;
+  }
 }
 
 .photoGallery {
