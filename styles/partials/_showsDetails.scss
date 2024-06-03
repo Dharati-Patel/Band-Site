@@ -31,6 +31,9 @@
                     font-size: 2.25rem;
                     margin: 2rem 0 2rem 0;
                 }
+                @include desktop {
+                    margin: 20px 0 2rem 0;
+                }
             }
         }
     }
@@ -63,21 +66,21 @@
             &-date {
 
                 @include tablet {
-                    margin-right: 9.375rem;
+                    margin: 0 8.125rem 0 0;
                     align-self: center;
                 }
                 @include desktop {
-                    margin: 5rem 0 0 2.5rem;
+                    margin: 5rem 0 1.875rem 2.5rem;
                 }
             }
 
             &-venue {
                 @include tablet {
-                    margin-right: 9.375rem;
+                    margin-right: 95px;
                     align-self: center;
                 }
                 @include desktop {
-                    margin: 5rem 0 0 12.8125rem;
+                    margin: 5rem 0 1.875rem 12.5rem;
                 }
             }
 
@@ -87,7 +90,7 @@
                     align-self: center;    
                 }
                 @include desktop {
-                    margin: 5rem 0 0 10.625rem;
+                    margin: 5rem 0 1.875rem 175px;
                 }
             }
 
@@ -111,6 +114,11 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid $silver;
+            margin-right: 6.875rem;
+        }
+
+        @include desktop {
+            margin: 0;
         }
         
         &--date-label {
@@ -187,6 +195,7 @@
             @include tablet {
                 margin: 0;
                 text-align: left;
+                
             }
         }
 
@@ -217,6 +226,7 @@
             @include tablet {
                 width: 160px;
                 height: 48px;
+                margin-left: .625rem;
             }
         }
     }

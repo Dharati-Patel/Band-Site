@@ -1,38 +1,13 @@
-let shows = [
-    {
-        date: "Mon Sept 09 2024",
-        venue: "Ronald Lane",
-        location: "San Francisco, CA"
-      },
-      {
-        date: "Tue Sept 17 2024",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA"
-      },
-      {
-        date: "Sat Oct 12 2024",
-        venue: "View Lounge",
-        location: "San Francisco, CA"
-      },
-      {
-        date: "Sat Nov 16 2024",
-        venue: "Hyatt Agency",
-        location: "San Francisco, CA"
-      },
-      {
-        date: "Fri Nov 29 2024",
-        venue: "Moscow Center",
-        location: "San Francisco, CA"
-      },
-      {
-        date: "Wed Dec 18 2024",
-        venue: "Pres Club",
-        location: "San Francisco, CA"
-      }
-];
+import BandSiteApi from "./band-site-api.js";
 
-function ShowsDetail(arr) {
+const apiKey = '3c710c1a-8ca8-4bae-93af-65c38573275d';
+const bandSiteApi = new BandSiteApi(apiKey);
+
+function ShowsDetail(showsData) {
     let table = document.querySelector(".shows__container");
+
+    // Clear existing content
+    table.innerHTML = '';
 
     //header container
     let headerContainer = document.createElement("div");
@@ -73,19 +48,22 @@ function ShowsDetail(arr) {
     detailLabel.appendChild(locationLabel);
     locationLabel.innerText = "LOCATION";
 
-    //button
-    let buttonLabel = document.createElement("button");
+    //button label
+    let buttonLabel = document.createElement("div");
     buttonLabel.classList.add("shows__description--label-button");
     detailLabel.appendChild(buttonLabel);
 
-    buttonLabel.innerText = "BUY TICKETS";
+    //button
+    let button = document.createElement("button");
+    button.classList.add("shows__description--label-button-text");
+    buttonLabel.appendChild(button);
+    button.innerText = "BUY TICKETS";
 
-    for (let i = 0; i < shows.length; i++) 
-    {
+    for (let i = 0; i < showsData.length; i++) {
         let dataContainer = document.createElement("div");
         dataContainer.classList.add("shows__data");
         detail.appendChild(dataContainer);
-        
+
         // data Date
         let dataDate = document.createElement("h3");
         dataDate.classList.add("shows__data--date-label");
@@ -96,9 +74,11 @@ function ShowsDetail(arr) {
         date.classList.add("shows__data--date");
         dataContainer.appendChild(date);
 
-        date.innerText = arr[i]["date"];
+        const options = { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' };
+        const formattedDate = new Date(showsData[i].date).toLocaleDateString('en-US', options).replace(/,/g, '');
+        date.innerText = formattedDate;
 
-         //Venues
+        //Venues
         let dataVenue = document.createElement("h3");
         dataVenue.classList.add("shows__data--venue-label");
         dataContainer.appendChild(dataVenue);
@@ -107,8 +87,7 @@ function ShowsDetail(arr) {
         let venue = document.createElement("h4");
         venue.classList.add("shows__data--venue");
         dataContainer.appendChild(venue);
-
-        venue.innerText = arr[i]["venue"];
+        venue.innerText = showsData[i].place;
 
         //Location
         let dataLocation = document.createElement("h3");
@@ -119,8 +98,7 @@ function ShowsDetail(arr) {
         let location = document.createElement("h4");
         location.classList.add("shows__data--location");
         dataContainer.appendChild(location);
-
-        location.innerText = arr[i]["location"];
+        location.innerText = showsData[i].location;
 
         //Button
         let dataButton = document.createElement("div");
@@ -130,9 +108,15 @@ function ShowsDetail(arr) {
         let button = document.createElement("button");
         button.classList.add("shows__data--button");
         dataButton.appendChild(button);
-
         button.innerText = "BUY TICKETS";
-
     }
-}    
-ShowsDetail(shows);
+}
+
+async function loadShowsData() {
+    const showsData = await bandSiteApi.getShowData();
+    ShowsDetail(showsData);
+   
+}
+
+document.addEventListener('DOMContentLoaded', loadShowsData);
+

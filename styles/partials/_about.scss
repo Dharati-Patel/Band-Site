@@ -3,6 +3,7 @@
 @use './mixins' as *;
 
 .about {
+    background-color: $white;
     margin: 0 1rem;
 
     @include tablet {
